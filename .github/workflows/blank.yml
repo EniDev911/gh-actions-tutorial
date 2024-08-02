@@ -12,9 +12,17 @@ on:
 jobs:
   # Este workflow contiene un simple paso llamado build
   build:
+    env: # seccion para definir variables de entono
+      platform: linux
+      region: us-east-1
+
     runs-on: ubuntu-latest
 
     # representan una secuencia de pasos o tareas para ser ejecutado como parte de este job
     steps:
       - name: "Mostrar mensaje" # Nombre de la tarea
         run: echo "Hola Mundo" # comando ejecutado
+      - name: "Mostrando variables de entornos"
+        run: |
+          echo "Este es el valor de la variable platform: ${{ env.platform }}"
+          echo "Este es el valor de la variable region: ${{ env.region }}"
