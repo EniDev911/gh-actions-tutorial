@@ -7,7 +7,7 @@ on:
     branches: ["main"]
 
   # permite correr tus workflows manualmente desde otras acciones
-  workflows_dispatch:
+  workflow_dispatch:
 
 jobs:
   # Este workflow contiene un simple paso llamado build
