@@ -1,0 +1,20 @@
+name: CI
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+
+  # permite correr tus workflows manualmente desde otras acciones
+  workflows_dispatch:
+
+jobs:
+  # Este workflow contiene un simple paso llamado build
+  build:
+    runs-on: ubuntu-latest
+
+    # representan una secuencia de pasos o tareas para ser ejecutado como parte de este job
+    steps:
+      - name: "Mostrar mensaje" # Nombre de la tarea
+        run: echo "Hola Mundo" # comando ejecutado
