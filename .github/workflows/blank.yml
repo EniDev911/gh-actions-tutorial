@@ -24,6 +24,6 @@ jobs:
         run: echo "Hola Mundo" # comando ejecutado
       - name: "Mostrando variables de entornos" # Otra tarea
         if: ${{ env.platform == 'azure' }}
-          run: |
+        run: |
             echo "Este es el valor de la variable platform: ${{ env.platform }}"
             echo "Este es el valor de la variable region: ${{ env.region }}"
